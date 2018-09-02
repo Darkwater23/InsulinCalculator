@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Angel's Calculator</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div id="container">
+	<h1 id="title">Breakfast</h1>
+	<p><label for="baseline">Baseline: </label><input type="number" id="baseline" name="baseline" value="" /></p>
+	<p><label for="ratio">Carb Ratio <small>(1/x)</small>: </label><input type="number" id="ratio" name="ratio" value="" /></p>
+	<p><label for="bloodsugar">Blood Sugar: </label><input type="number" id="bloodsugar" name="bloodsugar" value="" /></p>
+	<p><label for="mealcarbs">Meal Carbs <small>(g)</small>: </label><input type="number" id="mealcarbs" name="mealcarbs" value="" /></p>
+	<div class="button-bar">
+		<div class="button-row">
+			<a id="btnBreakfast" href="" onclick="setMeal('B');return false;">Breakfast</a>
+			<a id="btnLunch" href="" onclick="setMeal('L');return false;">Lunch</a>
+			<a id="btnDinner" href="" onclick="setMeal('D');return false;">Dinner</a>
+		</div>
+		<input type="button" id="btnCalculate" name="btnCalculate" value="Calculate" onclick="calculate();" />
+	</div>
+</div>
+
+<script src="dist/sweetalert.min.js"></script>
+<script src="dist/jquery-3.1.1.min.js"></script>
+<script src="app.js"></script> 
+<script>
+	$(function()
+	{
+		initialize();
+	});
+</script>
+</body>
+</html>
